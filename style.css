@@ -535,3 +535,284 @@ body {
 .day-menu::-webkit-scrollbar-thumb:hover {
   background: #666;
 }
+
+@media (max-width: 768px) {
+  /* ======================================== */
+  /* BODY */
+  /* ======================================== */
+
+  body {
+    padding: 10px;
+
+    overflow-x: hidden;
+  }
+
+  /* ======================================== */
+  /* APP */
+  /* ======================================== */
+
+  .app-screen {
+    width: 100%;
+
+    overflow-x: hidden;
+  }
+
+  /* ======================================== */
+  /* TOPO */
+  /* ======================================== */
+
+  .topbar {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 36px;
+
+    line-height: 1;
+  }
+
+  /* ======================================== */
+  /* CONTROLES */
+  /* ======================================== */
+
+  .controls {
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+  }
+
+  .controls select,
+  .controls button {
+    flex: 1 1 calc(50% - 10px);
+
+    min-width: 140px;
+
+    min-height: 48px;
+
+    font-size: 14px;
+  }
+
+  /* ======================================== */
+  /* LEGENDA */
+  /* ======================================== */
+
+  .legend {
+    display: none;
+  }
+
+  /* ======================================== */
+  /* FILTROS */
+  /* ======================================== */
+
+  .filters {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+    margin-bottom: 20px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+  }
+
+  .filters .filter-item {
+    width: 100%;
+
+    max-width: 330px;
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    padding: 0 18px;
+
+    border-radius: 14px;
+
+    box-sizing: border-box;
+
+    margin: 0 auto;
+  }
+
+  .filters .filter-item label {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 12px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    text-align: left;
+  }
+
+  .filters .filter-item input {
+    transform: scale(1.25);
+
+    margin: 0;
+
+    flex-shrink: 0;
+  }
+
+  /* ======================================== */
+  /* CALENDARIO */
+  /* ======================================== */
+
+  .calendar-container {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+  }
+
+  .month {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .month h2 {
+    text-align: center;
+
+    font-size: 28px;
+
+    margin-bottom: 18px;
+  }
+
+  /* ======================================== */
+  /* GRID */
+  /* ======================================== */
+
+  .days-grid {
+    gap: 8px;
+  }
+
+  .day-name {
+    font-size: 13px;
+  }
+
+  /* ======================================== */
+  /* DIAS */
+  /* ======================================== */
+
+  .day {
+    height: 46px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+  }
+
+  .date {
+    font-size: 14px;
+  }
+
+  .heart {
+    font-size: 11px;
+  }
+
+  /* ======================================== */
+  /* MENU FLUTUANTE */
+  /* ======================================== */
+
+  .day-menu {
+    width: 92vw;
+
+    max-width: 380px;
+
+    max-height: 70vh;
+
+    overflow-y: auto;
+
+    left: 50% !important;
+
+    transform: translateX(-50%);
+
+    padding: 14px;
+
+    border-radius: 18px;
+
+    box-sizing: border-box;
+  }
+
+  .day-menu button {
+    width: 100%;
+
+    min-height: 48px;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+  }
+
+  /* ======================================== */
+  /* LOGIN */
+  /* ======================================== */
+
+  .login-box {
+    width: 92%;
+
+    padding: 30px 22px;
+
+    box-sizing: border-box;
+  }
+
+  .login-box h1 {
+    font-size: 34px;
+  }
+
+  .input-group input {
+    height: 48px;
+
+    font-size: 15px;
+  }
+
+  .login-box button {
+    height: 50px;
+
+    font-size: 15px;
+  }
+}
