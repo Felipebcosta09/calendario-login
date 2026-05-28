@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Escala 2026</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ================================================= -->
+    <!-- LOGIN -->
+    <!-- ================================================= -->
+
+    <section id="loginScreen" class="login-screen">
+      <div class="login-box">
+        <h1>ESCALA<span>2026</span></h1>
+
+        <p>Área privada</p>
+
+        <form id="loginForm">
+          <div class="input-group">
+            <label> Usuário </label>
+
+            <input
+              type="text"
+              id="username"
+              placeholder="Digite seu usuário"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label> Senha </label>
+
+            <input
+              type="password"
+              id="password"
+              placeholder="Digite sua senha"
+              required
+            />
+          </div>
+
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================================================= -->
+    <!-- APP -->
+    <!-- ================================================= -->
+
+    <section id="appScreen" class="app-screen hidden">
+      <!-- TOPO -->
+
+      <header class="topbar">
+        <div class="logo">ESCALA<span>2026</span></div>
+
+        <div class="controls">
+          <!-- PRESET -->
+
+          <select id="presetSelect">
+            <option value="work">Preset Trabalho</option>
+
+            <option value="relationship">Preset Relacionamento</option>
+
+            <option value="custom">Preset Personalizado</option>
+          </select>
+
+          <!-- LIMPAR -->
+
+          <button id="clearBtn">Limpar Marcações</button>
+
+          <!-- SAIR -->
+
+          <button id="logoutBtn">Sair</button>
+          <button id="historyBtn" class="hidden">Histórico</button>
+        </div>
+      </header>
+
+      <!-- ================================================= -->
+      <!-- LEGENDA -->
+      <!-- ================================================= -->
+
+      <section id="legendContainer" class="legend"></section>
+
+      <section id="filters" class="filters"></section>
+
+      <!-- ================================================= -->
+      <!-- CALENDARIO -->
+      <!-- ================================================= -->
+
+      <main>
+        <div id="calendarContainer" class="calendar-container"></div>
+      </main>
+    </section>
+
+    <!-- ================================================= -->
+    <!-- JS -->
+    <!-- ================================================= -->
+
+    <!-- MENU FLUTUANTE -->
+
+    <div id="dayMenu" class="day-menu hidden"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-sha256@0.9.0/build/sha256.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
