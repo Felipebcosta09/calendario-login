@@ -73,7 +73,7 @@ const months = [
   "Dezembro",
 ];
 
-const weekDays = ["S", "T", "Q", "Q", "S", "S", "D"];
+const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
 
 /* ================================================= */
 /* PRESETS */
@@ -399,7 +399,6 @@ function updateFilters() {
     }
   });
 }
-
 /* ================================================= */
 /* CALENDARIO */
 /* ================================================= */
@@ -430,13 +429,7 @@ function generateCalendar() {
       daysGrid.appendChild(dayName);
     });
 
-    let firstDay = new Date(year, month, 1).getDay();
-
-    if (firstDay === 0) {
-      firstDay = 7;
-    }
-
-    firstDay--;
+    const firstDay = new Date(year, month, 1).getDay();
 
     const totalDays = new Date(year, month + 1, 0).getDate();
 
@@ -645,7 +638,7 @@ function applyAutomaticScale(dayDiv, year, month, day) {
 
   const weekNumber = getWeekNumber(currentDate);
 
-  const fullWeek = (weekNumber + 1) % 2 === 0;
+  const fullWeek = weekNumber % 2 === 0;
 
   const dateKey = `${day}/${month + 1}`;
 
@@ -711,7 +704,7 @@ function applyAutomaticScale(dayDiv, year, month, day) {
 /* ================================================= */
 
 function getWeekNumber(date) {
-  const startDate = new Date(2026, 0, 1);
+  const startDate = new Date(2026, 4, 25);
 
   const current = new Date(date);
 
